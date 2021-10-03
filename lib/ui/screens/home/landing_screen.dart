@@ -1,6 +1,14 @@
+import 'package:example_widget/ui/screens/home/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class LandingPage extends StatelessWidget {
+class LandingPage extends StatefulWidget {
+  const LandingPage({Key? key}) : super(key: key);
+  @override
+  _LandingPageState createState() => _LandingPageState();
+}
+
+class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +24,7 @@ class LandingPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(60),
               ),
               onPressed: () {
-                Get.to(LoginPage());
+                Get.to(LoginScreen());
               },
               child: Text('Login'),
             ),

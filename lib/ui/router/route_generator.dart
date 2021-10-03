@@ -1,5 +1,6 @@
 import 'package:example_widget/ui/router/route_list.dart';
 import 'package:example_widget/ui/screens/home/home_screen.dart';
+import 'package:example_widget/ui/screens/home/landing_screen.dart';
 import 'package:flutter/material.dart';
 
 class RouteGenerator {
@@ -10,7 +11,7 @@ class RouteGenerator {
       case routeHome:
         return MaterialPageRoute(builder: (context) => const HomeScreen());
       case routeLanding:
-        return MaterialPageRoute(builder: (context) => const LandingScreen());
+        return MaterialPageRoute(builder: (context) => const LandingPage());
       default:
         return null;
     }
