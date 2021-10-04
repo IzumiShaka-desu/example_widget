@@ -13,6 +13,11 @@ class _HomeScreenState extends State<HomeScreen> {
       _counter++;
     });
   }
+  void _decrementCounter() {
+    setState(() {
+      _counter--;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,11 +39,17 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: Row([FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
+        FloatingActionButton(
+        onPressed: _decrementCounter,
+        tooltip: 'Decrement',
+        child: const Icon(Icons.remove),
+      ),
+       ]),
     );
   }
 }
